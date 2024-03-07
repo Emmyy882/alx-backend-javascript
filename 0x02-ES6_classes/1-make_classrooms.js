@@ -1,12 +1,13 @@
 import ClassRoom from './0-classroom';
 
 export default function initializeRooms() {
-  const obj1 = new ClassRoom(19);
-  const obj2 = new ClassRoom(20);
-  const obj3 = new ClassRoom(34);
+  const objArray = [19, 20, 34];
+  const newArray = [];
 
-  const arr = [];
-  arr.push(obj1, obj2, obj3);
+  for (const i in objArray) {
+    const obj = new ClassRoom(objArray[i]);
+    newArray.push(obj);
+  }
 
-  return arr;
+  return newArray;
 }
